@@ -11,7 +11,7 @@
 <header class="header">
     <div class="container">
         <div class="nav">
-            <img src="images/NX3.png" alt="Logo" class="logo">
+            <img src="images/NX.png" alt="Logo" class="logo">
             <ul class="menu">
                 <li>
                     <a href="#">Главная</a>
