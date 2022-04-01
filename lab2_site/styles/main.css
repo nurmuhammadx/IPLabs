@@ -1,8 +1,8 @@
 body {
     padding: 0;
     margin: 0;
-
-    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-family: 'Oswald', sans-serif;
     font-size: 16px;
 }
 
@@ -12,13 +12,36 @@ ul, li {
     padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: red;
+    font-family: 'Rubik Wet Paint', cursive;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.55em;
+    margin: 0;
+}
+
+p {
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    line-height: 1.55em;
+    margin: 0;
+}
+
 .container {
     width: 1400px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .header {
     background: url('../images/home_background.jpg') no-repeat center top;;
+}
+
+.header-content {
+    margin-top: 80px;
+    margin-left: 160px;
+    display: flex;
 }
 
 header a {
@@ -26,8 +49,7 @@ header a {
 }
 
 .logo {
-
-    margin-right: 100px;
+    margin-right: 75px;
 }
 
 .logo:hover {
@@ -36,6 +58,7 @@ header a {
 
 .menu {
     display: flex;
+    margin-right: 500px;
 }
 
 .menu li a {
@@ -57,10 +80,47 @@ header a {
     display: flex;
     align-items: center;
     padding-top: 50px;
-
 }
-/*----------------------------------------------*/
-.red:hover {
+
+.sign-up {
+    display: flex;
+}
+
+.sign-up li {
+    margin-right: 5px;
+}
+
+.sign-up li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+
+.sign-up li a:hover {
     color: red;
 }
 
+.text {
+    margin-top: 110px;
+    margin-bottom: 221px;
+}
+
+.text-title {
+    margin-left: 95px;
+    margin-bottom: 30px;
+}
+
+.my-image {
+    margin-top: 300px;
+    width: 400px;
+    height: 450px;
+    border-radius: 10%;
+    margin: 0;
+    margin-left: 100px;
+}
+
+.copyright {
+    margin-top: 20px;
+    padding-bottom: 30px;
+}

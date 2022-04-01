@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <title>Главная</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Pacifico&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <script type="text/javascript" src="/scripts/script.js"></script>
 </head>
 <body>
-
 <header class="header">
     <div class="container">
         <div class="nav">
-            <img src="images/NX.png" alt="Logo" class="logo">
+            <a href="#">
+                <img src="images/NX.png" alt="Logo" class="logo">
+            </a>
             <ul class="menu">
                 <li>
                     <a href="#">Главная</a>
@@ -29,6 +33,29 @@
                     <a href="#">Контакты</a>
                 </li>
             </ul>
+            <ul class="sign-up">
+                <li>
+                    <a href="#">Регистрация</a>
+                </li>
+                <li><span>|</span></li>
+                <li>
+                    <a href="#">Войти</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-content">
+            <div class="text">
+                <h1 class="text-title">Добро пажаловать</h1>
+                <p>
+                    Вы попали на домашнюю страницу персонального сайта студента<br>
+                    Ульяновского государственного технического университета<br>
+                    группы ИВТАСбд-12 Худойдотова Нурмухаммада.
+                </p>
+            </div>
+            <img src="images/myfoto.jpg" alt="MyFoto" class="my-image">
+        </div>
+        <div class="copyright">
+            Этот сайт разработан в рамках выполнения лабораторной работы в 2022 г.
         </div>
     </div>
 </header>
