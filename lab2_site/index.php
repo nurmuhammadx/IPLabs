@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mainStyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Pacifico&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
                     <a href="gallery.php">Галерея</a>
                 </li>
                 <li>
-                    <a href="about.php">О себе</a>
+                    <a href="about.php">Обо мне</a>
                 </li>
                 <li>
                     <a href="contacts.php">Контакты</a>

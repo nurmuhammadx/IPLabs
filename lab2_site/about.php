@@ -2,8 +2,9 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Главная</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Обо мне</title>
+    <link rel="stylesheet" href="styles/mainStyle.css">
+    <link rel="stylesheet" href="styles/aboutStyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Pacifico&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -27,7 +28,7 @@
                     <a href="gallery.php">Галерея</a>
                 </li>
                 <li>
-                    <a href="about.php">О себе</a>
+                    <a href="about.php">Обо мне</a>
                 </li>
                 <li>
                     <a href="contacts.php">Контакты</a>
@@ -43,16 +44,23 @@
                 </li>
             </ul>
         </div>
-        <div class="header-content">
-            <div class="text">
-                <h1 class="text-title">Добро пажаловать</h1>
+        <div class="header-content-about">
+            <a href="images/myfoto.jpg">
+                <img src="images/myfoto.jpg" alt="MyFoto" class="about-image">
+            </a>
+            <div class="text-about">
+                <h1 class="text-title-about">Обо мне</h1>
                 <p>
-                    Вы попали на домашнюю страницу персонального сайта студента<br>
-                    Ульяновского государственного технического университета<br>
-                    группы ИВТАСбд-12 Худойдотова Нурмухаммада.
+                    Меня зовут Нурмухаммад, и мне 19 лет. Я родился 21 февраля<br>
+                    2003 года в городе Худжанд в Таджикистане. В 2010 году я пошел в<br>
+                    превый класс в частную школу НОУ «Гимназия имени И. В. Гёте».<br>
+                    Там я отучился 2 года и потом перешел в обчычную школу СОУ №19.<br>
+                    В 2021 году закончив школу я поступил в УлГТУ на Факультет<br>
+                    информационных систем и технологии. Во время внеучебной<br>
+                    деятельности я люблю общаться с друзьями, смотреть фильмы<br>
+                    и развивать свой кругозор.
                 </p>
             </div>
-            <img src="images/myfoto.jpg" alt="MyFoto" class="my-image">
         </div>
         <div class="copyright">
             Этот сайт разработан в рамках выполнения лабораторной работы в 2022 г.
