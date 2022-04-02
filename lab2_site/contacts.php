@@ -43,20 +43,6 @@
                 </li>
             </ul>
         </div>
-        <div class="header-content">
-            <div class="text">
-                <h1 class="text-title">Добро пажаловать</h1>
-                <p>
-                    Вы попали на домашнюю страницу персонального сайта студента<br>
-                    Ульяновского государственного технического университета<br>
-                    группы ИВТАСбд-12 Худойдотова Нурмухаммада.
-                </p>
-            </div>
-            <img src="images/myfoto.jpg" alt="MyFoto" class="my-image">
-        </div>
-        <div class="copyright">
-            Этот сайт разработан в рамках выполнения лабораторной работы в 2022 г.
-        </div>
     </div>
 </header>
 </body>

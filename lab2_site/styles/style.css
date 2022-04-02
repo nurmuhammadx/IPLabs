@@ -25,7 +25,7 @@ p {
     font-family: 'Pacifico', cursive;
     font-size: 20px;
     letter-spacing: 0.1em;
-    line-height: 1.55em;
+    line-height: 1.8em;
     margin: 0;
 }
 
@@ -35,21 +35,17 @@ p {
 }
 
 .header {
-    background: url('../images/home_background.jpg') no-repeat center top;;
+    background: url('../images/home_background.jpg') no-repeat center top;
 }
 
 .header-content {
     margin-top: 80px;
-    margin-left: 160px;
+    margin-left: 200px;
     display: flex;
 }
 
 header a {
     color: white;
-}
-
-.logo {
-    margin-right: 75px;
 }
 
 .logo:hover {
@@ -58,7 +54,6 @@ header a {
 
 .menu {
     display: flex;
-    margin-right: 500px;
 }
 
 .menu li a {
@@ -80,6 +75,7 @@ header a {
     display: flex;
     align-items: center;
     padding-top: 50px;
+    justify-content: space-between;
 }
 
 .sign-up {
@@ -112,15 +108,14 @@ header a {
 }
 
 .my-image {
-    margin-top: 300px;
     width: 400px;
     height: 450px;
     border-radius: 10%;
-    margin: 0;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 .copyright {
-    margin-top: 20px;
+    margin-top: 5px;
     padding-bottom: 30px;
 }
+

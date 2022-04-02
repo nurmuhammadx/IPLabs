@@ -10,7 +10,7 @@
     <script src="/scripts/script.js"></script>
 </head>
 <body>
-<header class="header">
+<header class="header-about">
     <div class="container">
         <div class="nav">
             <a href="index.php">
