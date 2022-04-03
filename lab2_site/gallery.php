@@ -22,10 +22,10 @@
                     <a href="index.php">Главная</a>
                 </li>
                 <li>
-                    <a href="#">Мои работы</a>
+                    <a href="myworks.php">Мои работы</a>
                 </li>
                 <li>
-                    <a href="gallery.php">Галерея</a>
+                    <a href="gallery.php" style="background: red; border: 7px solid red; border-radius: 2ch;">Галерея</a>
                 </li>
                 <li>
                     <a href="about.php">О себе</a>

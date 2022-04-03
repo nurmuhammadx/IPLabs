@@ -1,0 +1,61 @@
+.header-content-gallery {
+    margin-top: 80px;
+}
+
+.text-title-work {
+    margin-left: 570px;
+    margin-bottom: 70px;
+}
+
+.bloc-jfc {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 160px;
+    margin-left: 160px;
+}
+
+.bloc-lab {
+    background: black;
+    width: 415px;
+    height: 190px;
+    background: rgba(0, 0, 0, 0.6);
+    padding-top: 30px;
+    padding-left: 40px;
+    border: 3px solid darkred;
+}
+
+.button-first-colum {
+    display: flex;
+}
+
+.button-second-colum {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 105px;
+    margin-left: 55px
+}
+
+.button {
+    background: darkred;
+    width: 100px;
+    height: 30px;
+    text-transform: uppercase;
+    padding: 10px 0px 5px 15px;
+    border-radius: 2ch;
+    margin-left: 8px;
+    margin-top: 20px;
+}
+
+.button a {
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.button:hover {
+    background: red;
+}
+
+.copyright {
+    margin-top: 180px;
+}
+

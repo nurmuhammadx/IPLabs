@@ -22,7 +22,7 @@
                     <a href="index.php">Главная</a>
                 </li>
                 <li>
-                    <a href="#">Мои работы</a>
+                    <a href="myworks.php">Мои работы</a>
                 </li>
                 <li>
                     <a href="gallery.php">Галерея</a>
@@ -31,7 +31,7 @@
                     <a href="about.php">Обо мне</a>
                 </li>
                 <li>
-                    <a href="contacts.php">Контакты</a>
+                    <a href="contacts.php" style="background: red; border: 7px solid red; border-radius: 2ch;">Контакты</a>
                 </li>
             </ul>
             <ul class="sign-up">

@@ -48,10 +48,6 @@ header a {
     color: white;
 }
 
-.logo:hover {
-    color: red;
-}
-
 .menu {
     display: flex;
 }
@@ -61,10 +57,6 @@ header a {
     text-decoration: none;
     font-size: 14px;
     letter-spacing: 0.1em;
-}
-
-.menu li a:hover {
-    color: red;
 }
 
 .menu li {
