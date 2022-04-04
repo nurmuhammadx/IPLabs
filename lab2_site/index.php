@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная</title>
+    <meta name="vieport" content="width=divice-width, initial-scale=1,
+    shrink-to-fit=no">
     <link rel="stylesheet" href="styles/mainStyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Pacifico&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <script src="/scripts/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
 </head>
 <body>
 <header class="header">
@@ -18,7 +21,7 @@
             </a>
             <ul class="menu">
                 <li>
-                    <a href="index.php" style="background: red; border: 7px solid red; border-radius: 2ch;">Главная</a>
+                    <a href="index.php" style="border-bottom: 3px solid red;">Главная</a>
                 </li>
                 <li>
                     <a href="myworks.php">Мои работы</a>
@@ -41,14 +44,19 @@
                 <li>
                     <a href="#">Войти</a>
                 </li>
+                <li>
+                    <button class="menu-open">
+                        <img src="images/menu.svg" alt="open-menu">
+                    </button>
+                </li>
             </ul>
         </div>
         <div class="header-content">
             <div class="text">
                 <h1 class="text-title">Добро пажаловать</h1>
                 <p>
-                    Вы попали на домашнюю страницу персонального сайта студента<br>
-                    Ульяновского государственного технического университета<br>
+                    Вы попали на домашнюю страницу персонального сайта <br>студента
+                    Ульяновского государственного технического<br> университета
                     группы ИВТАСбд-12 Худойдотова Нурмухаммада.
                 </p>
             </div>

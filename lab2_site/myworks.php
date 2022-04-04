@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Мои работы</title>
+    <meta name="vieport" content="width=divice-width, initial-scale=1,
+    shrink-to-fit=no">
     <link rel="stylesheet" href="styles/mainStyle.css">
     <link rel="stylesheet" href="styles/my-workStyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Pacifico&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <script src="/scripts/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
 </head>
 <body>
 <header class="header">
@@ -22,7 +25,7 @@
                     <a href="index.php">Главная</a>
                 </li>
                 <li>
-                    <a href="myworks.php" style="background: red; border: 7px solid red; border-radius: 2ch;">Мои работы</a>
+                    <a href="myworks.php" style="border-bottom: 3px solid red;">Мои работы</a>
                 </li>
                 <li>
                     <a href="gallery.php">Галерея</a>
@@ -41,6 +44,11 @@
                 <li><span>|</span></li>
                 <li>
                     <a href="#">Войти</a>
+                </li>
+                <li>
+                    <button class="menu-open">
+                        <img src="images/menu.svg" alt="open-menu">
+                    </button>
                 </li>
             </ul>
         </div>

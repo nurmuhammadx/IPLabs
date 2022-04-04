@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Обо мне</title>
+    <meta name="vieport" content="width=divice-width, initial-scale=1,
+    shrink-to-fit=no">
     <link rel="stylesheet" href="styles/mainStyle.css">
     <link rel="stylesheet" href="styles/aboutStyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Pacifico&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <script src="/scripts/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
 </head>
 <body>
-<header class="header-about">
+<header class="header">
     <div class="container">
         <div class="nav">
             <a href="index.php">
@@ -28,7 +31,7 @@
                     <a href="gallery.php">Галерея</a>
                 </li>
                 <li>
-                    <a href="about.php" style="background: red; border: 7px solid red; border-radius: 2ch;">Обо мне</a>
+                    <a href="about.php" style="border-bottom: 3px solid red;">Обо мне</a>
                 </li>
                 <li>
                     <a href="contacts.php">Контакты</a>
@@ -41,6 +44,11 @@
                 <li><span>|</span></li>
                 <li>
                     <a href="#">Войти</a>
+                </li>
+                <li>
+                    <button class="menu-open">
+                        <img src="images/menu.svg" alt="open-menu">
+                    </button>
                 </li>
             </ul>
         </div>
