@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная</title>
-    <meta name="vieport" content="width=divice-width, initial-scale=1,
+    <meta name="viewport" content="width=device-width, initial-scale=1,
     shrink-to-fit=no">
     <link rel="stylesheet" href="styles/mainStyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">

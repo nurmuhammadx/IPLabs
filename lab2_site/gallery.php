@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Галерея</title>
-    <meta name="vieport" content="width=divice-width, initial-scale=1,
+    <meta name="viewport" content="width=device-width, initial-scale=1,
     shrink-to-fit=no">
     <link rel="stylesheet" href="styles/mainStyle.css">
     <link rel="stylesheet" href="styles/galleryStyle.css">
