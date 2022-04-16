@@ -10,8 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Pacific&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-    <script type="text/javascript" src="scripts/main.js"></script>
 </head>
 <body>
 <header class="header">
@@ -54,10 +52,41 @@
         </div>
         <div class="header-content-gallery">
             <h1 class="text-title-gallery">Галерея</h1>
+            <div class="flex-wrapper">
+                <div class="slider-wrapper">
+                    <div class="slide fade active">
+                        <img src="images/gallery/1.jpg" alt="">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/gallery/2.jpg" alt="">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/gallery/3.jpg" alt="">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/gallery/4.jpg" alt="">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/gallery/5.jpg" alt="">
+                    </div>
+                    <div id="btn-prev"></div>
+                    <div id="btn-next"></div>
+                </div>
+            </div>
+            <div class="dots-wrapper">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
             <div class="copyright">
                 Этот сайт разработан в рамках выполнения лабораторной работы в 2022 г.
             </div>
     </div>
 </header>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
+<script type="text/javascript" src="scripts/galleryScript.js"></script>
 </body>
 </html>
