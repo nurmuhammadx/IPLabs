@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Галерея</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,
-    shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="styles/mainStyle.css">
     <link rel="stylesheet" href="styles/galleryStyle.css">
+    <link rel="stylesheet" href="styles/animate.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Pacific&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 <header class="header">
     <div class="container">
         <div class="nav">
-            <a href="index.php">
+            <a href="#">
                 <img src="images/NX.png" alt="Logo" class="logo">
             </a>
             <ul class="menu">
@@ -53,37 +53,24 @@
         <div class="header-content-gallery">
             <h1 class="text-title-gallery">Галерея</h1>
             <div class="flex-wrapper">
-                <div class="slider-wrapper">
-                    <div class="slide fade active">
-                        <img src="images/gallery/1.jpg" alt="">
-                    </div>
-                    <div class="slide fade">
-                        <img src="images/gallery/2.jpg" alt="">
-                    </div>
-                    <div class="slide fade">
-                        <img src="images/gallery/3.jpg" alt="">
-                    </div>
-                    <div class="slide fade">
-                        <img src="images/gallery/4.jpg" alt="">
-                    </div>
-                    <div class="slide fade">
-                        <img src="images/gallery/5.jpg" alt="">
-                    </div>
-                    <div id="btn-prev"></div>
-                    <div id="btn-next"></div>
+                <ul id="photos">
+                    <li><img src="images/gallery/1.jpg" alt=""></li>
+                    <li><img src="images/gallery/2.jpg" alt=""></li>
+                    <li><img src="images/gallery/3.jpg" alt=""></li>
+                    <li><img src="images/gallery/4.jpg" alt=""></li>
+                    <li><img src="images/gallery/5.jpg" alt=""></li>
+                </ul>
+                <div class="arrow previous">
+                    <img src="images/gallery/arr-left.png" alt="">
                 </div>
-            </div>
-            <div class="dots-wrapper">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+                <div class="arrow next">
+                    <img src="images/gallery/arr-right.png" alt="">
+                </div>
             </div>
             <div class="copyright">
                 Этот сайт разработан в рамках выполнения лабораторной работы в 2022 г.
             </div>
-    </div>
+        </div>
 </header>
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
 <script type="text/javascript" src="scripts/main.js"></script>

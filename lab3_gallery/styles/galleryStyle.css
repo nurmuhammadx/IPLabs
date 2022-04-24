@@ -4,103 +4,62 @@
 
 .text-title-gallery {
     margin-left: 500px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-.flex-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+#photos{
+    margin:0 auto;
+    width:650px;
+    position:relative;
 }
 
-.slider-wrapper {
-    display: flex;
-    max-width: 800px;
-    width: 100%;
-    height: 450px;
+#photos li{
+    position:absolute;
+    width:650px;
+    height:450px;
+    overflow:hidden;
+    border: 5px solid darkred;
+    border-radius: 5ch;
+    z-index:10;
+
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+#photos li img{
     position: relative;
-    border: 2px solid grey;
-    /*background-color: black;*/
-}
-
-#btn-prev, #btn-next {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 40px;
-    background-color: rgba(192,192,192,0.4);
-    transition: opacity .2s ease-in-out;
-}
-
-#btn-prev:hover, #btn-next:hover {
-    background-color: rgba(128,0,0,0.8);
-}
-
-#btn-next {
-    left: auto;
-    right: 0;
-}
-
-.slide {
-    width: 100%;
-    height: 100%;
-    display: none;
-}
-
-.slide.active {
-    display: block;
+    background-size: cover;
+    text-indent:-9999px;
+    overflow:hidden;
 }
 
 img {
     width: 100%;
     height: 100%;
 }
-.dots-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
+
+div.arrow.next, div.arrow.previous {
+    position: absolute;
+    height: 10%;
+    width: 40px;
+    transition: opacity .2s ease-in-out;
 }
 
-.dot.active {
-    background-color: red;
-}
-
-.dot:hover {
-    background-color: red;
-}
-
-span {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: rgba(128,0,0,0.6);
-    margin-left: 10px;
+div.arrow.next {
+    margin-top: 200px;
+    margin-left: 940px;
     cursor: pointer;
 }
 
-span:last-child {
-    margin-right: 0;
-}
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from{opacity: .3}
-    to{opacity: 1.5}
-}
-@keyframes fade {
-    from{opacity: .3}
-    to{opacity: 1.5}
+div.arrow.previous {
+    margin-top: 200px;
+    margin-left: 200px;
+    cursor: pointer;
 }
 
 .copyright {
-    margin-top: 30px;
+    margin-top: 535px;
 }
 /*--------------------------------------------------*/
 @media screen and (max-width: 1200px) {
@@ -116,6 +75,13 @@ span:last-child {
     .text-title-gallery {
         margin-left: 400px;
     }
+    div.arrow.next {
+        margin-left: 840px;
+    }
+
+    div.arrow.previous {
+        margin-left: 90px;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -123,7 +89,24 @@ span:last-child {
         width: 720px;
     }
     .text-title-gallery {
-        margin-left: 300px;
+        margin-left: 270px;
+    }
+    #photos{
+        width:450px;
+    }
+    #photos li{
+        width:450px;
+        height:350px;
+
+    }
+    div.arrow.next {
+        margin-top: 130px;
+        margin-left: 620px;
+    }
+
+    div.arrow.previous {
+        margin-top: 130px;
+        margin-left: 70px;
     }
 }
 
@@ -132,13 +115,30 @@ span:last-child {
         width: 540px;
     }
     .text-title-gallery {
-        margin-left: 175px;
+        margin-left: 135px;
+    }
+    #photos{
+        width:290px;
+    }
+    #photos li{
+        width:300px;
+        height:300px;
+
+    }
+    div.arrow.next {
+        margin-top: 100px;
+        margin-left: 400px;
+    }
+
+    div.arrow.previous {
+        margin-top: 100px;
+        margin-left: 0;
     }
 }
 
 @media screen and (max-width: 575px) {
     .container {
         width: 100%;
-        /*padding: 0 15px;*/
+        padding: 0 15px;
     }
 }

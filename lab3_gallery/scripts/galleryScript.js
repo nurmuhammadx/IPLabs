@@ -1,59 +1,76 @@
-const prev = document.getElementById('btn-prev'),
-      next = document.getElementById('btn-next'),
-      slides = document.querySelectorAll('.slide'),
-      dots = document.querySelectorAll('.dot');
+$(function() {
 
-let index = 0;
+    let exits = ['fadeOut', 'fadeOutDown', 'fadeOutUpBig', 'bounceOut', 'bounceOutDown', 'hinge',
+        'bounceOutUp', 'bounceOutLeft', 'rotateOut', 'rotateOutUpLeft', 'lightSpeedOut', 'rollOut'];
 
-const activeSlide = n => {
-    for(slide of slides) {
-        slide.classList.remove('active');
-    }
-    slides[n].classList.add('active');
-}
+    let entrances = ['fadeIn', 'fadeInDown', 'fadeInRight', 'bounceIn', 'bounceInRight', 'rotateIn',
+        'rotateInDownLeft', 'lightSpeedIn', 'rollIn', 'bounceInDown' ];
 
-const activeDot = n => {
-    for(let dot of dots) {
-        dot.classList.remove('active');
-    }
-    dots[n].classList.add('active');
-}
+    let photos = $('#photos'),
+        ignoreClicks = false;
 
-const activeFunc = (ind) => {
-    activeSlide(index);
-    activeDot(index);
-}
+    $('.arrow').click(function(e, simulated){
+        if(ignoreClicks){
+            // если нажатия на стрелки отслеживать не надо
+            e.stopImmediatePropagation();
+            return false;
+        }
 
-const nextSlide = () => {
-    if(index === slides.length - 1) {
-        index = 0;
-        activeFunc(index);
-    } else {
-        index++;
-        activeFunc(index);
-    }
-}
+        // Otherwise allo this click to proceed,
+        // but raise the ignoreClicks flag
 
-const prevSlide = () => {
-    if(index === 0) {
-        index = slides.length - 1;
-        activeFunc(index);
-    } else {
-        index--;
-        activeFunc(index);
-    }
-}
+        ignoreClicks = true;
 
+        if(!simulated){
+            // если произощло нажатие на кнопку,
+            // останавливаем автоматическую смену картинок
+            clearInterval(slideshow);
+        }
+    });
 
+    // нажатия на стрелку следующего изображения
+    $('.arrow.next').click(function(e){
+        e.preventDefault();
+        let elem = $('#photos li:last');
 
-dots.forEach((item, indexDot) => {
-    item.addEventListener('click', () => {
-        index = indexDot;
-        activeFunc(index);
-    })
-})
+        // назначаем случайную анимацию
+        elem.addClass('animated')
+            .addClass( exits[Math.floor(exits.length*Math.random())] );
 
-next.addEventListener('click', nextSlide);
-prev.addEventListener('click', prevSlide);
+        setTimeout(function(){
 
-setInterval(nextSlide, 3000);
+            // убираем класс анимации
+            elem.attr('class','').prependTo(photos);
+
+            // анимация закончилась
+            // позволяем нажатия на кнопки:
+            ignoreClicks = false;
+
+        },1000);
+    });
+
+    // нажатия на стрелку предыдущего фото
+    $('.arrow.previous').click(function(e){
+        e.preventDefault();
+        let elem = $('#photos li:first');
+
+        // передвигаем картинку вверх
+        // и назначаем анимацию
+        elem.appendTo(photos)
+            .addClass('animated')
+            .addClass( entrances[Math.floor(entrances.length*Math.random())] );
+
+        setTimeout(function(){
+            // убираем класс
+            elem.attr('class','');
+
+            ignoreClicks = false;
+        },1000);
+    });
+
+    // автоматическая смена картинок
+    let slideshow = setInterval(function(){
+        $('.arrow.next').trigger('click',[true]);
+    }, 1500);
+
+});
