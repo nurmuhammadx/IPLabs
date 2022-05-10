@@ -1,76 +1,95 @@
-$(function() {
+let numberImage = 1;
+let tmpAnimation = 0;
+let clickCount = 1;
+const countImage = 6;
+const speed = 1500;
+const pathImages = "images/gallery/";
 
-    let exits = ['fadeOut', 'fadeOutDown', 'fadeOutUpBig', 'bounceOut', 'bounceOutDown', 'hinge',
-        'bounceOutUp', 'bounceOutLeft', 'rotateOut', 'rotateOutUpLeft', 'lightSpeedOut', 'rollOut'];
+// функция для генерации изображения 
+function generateImage() {
+    let image = pathImages + numberImage + ".jpg";
+    $('#mainImage').css("background-image", 'url('+image+')');
+}
 
-    let entrances = ['fadeIn', 'fadeInDown', 'fadeInRight', 'bounceIn', 'bounceInRight', 'rotateIn',
-        'rotateInDownLeft', 'lightSpeedIn', 'rollIn', 'bounceInDown' ];
+// функция смены изображения
+function changeImage() {
+    let image = pathImages + numberImage + ".jpg";
+    $('#mainImage').fadeOut(speed, function() {
+        $(this).css("background-image", 'url('+image+')');
+        $(this).fadeIn(speed);
+    });
+}
 
-    let photos = $('#photos'),
-        ignoreClicks = false;
-
-    $('.arrow').click(function(e, simulated){
-        if(ignoreClicks){
-            // если нажатия на стрелки отслеживать не надо
-            e.stopImmediatePropagation();
-            return false;
+// функция для оборота против часовой
+function leftRotate(degreeS) {
+    const element = $("#mainImage");
+    $({degrees: tmpAnimation + degreeS}).animate({degrees: tmpAnimation}, {
+        duration: 3000,
+        step: function(now) {
+            element.css({transform: 'rotate(' + now + 'deg)'});
         }
+    });
+}
 
-        // Otherwise allo this click to proceed,
-        // but raise the ignoreClicks flag
-
-        ignoreClicks = true;
-
-        if(!simulated){
-            // если произощло нажатие на кнопку,
-            // останавливаем автоматическую смену картинок
-            clearInterval(slideshow);
+// функция для оборота по часовой
+function rightRotate(degreeS) {
+    const element = $("#mainImage");
+    $({degrees: tmpAnimation - degreeS}).animate({degrees: tmpAnimation}, {
+        duration: 3000,
+        step: function(now) {
+            element.css({transform: 'rotate(' + now + 'deg)'});
         }
     });
+}
 
-    // нажатия на стрелку следующего изображения
-    $('.arrow.next').click(function(e){
-        e.preventDefault();
-        let elem = $('#photos li:last');
+// левый клик
+function leftClickImage() {
+     if(numberImage > 1) {
+         numberImage--;
+     } else {
+         numberImage = countImage;
+     }
+     if(clickCount === 1 || clickCount === 4) {
+        rightRotate(180);
+     }
+     else if(clickCount === 2 || clickCount === 5) {
+        leftRotate(270);
+     }
+     else if(clickCount === 3) {
+        rightRotate(360);
+     }
+     else if(clickCount === 6) {
+         rightRotate(360);
+         clickCount = 0;
+     }
+     changeImage();
+     clickCount++;
+}
 
-        // назначаем случайную анимацию
-        elem.addClass('animated')
-            .addClass( exits[Math.floor(exits.length*Math.random())] );
+// правый клик
+function rightClickImage() {
+    if(numberImage < countImage) {
+        numberImage++;
+    } else {
+        numberImage = 1; 
+    }
+    if(clickCount === 1 || clickCount === 4) {
+        rightRotate(180);
+    }
+     else if(clickCount === 2 || clickCount === 5) {
+        leftRotate(270);
+     }
+     else if(clickCount === 3) {
+        rightRotate(360);
+     }
+     else if(clickCount === 6) {
+        rightRotate(360);
+        clickCount = 0;
+    }
+    changeImage();
+     clickCount++;
+}
 
-        setTimeout(function(){
-
-            // убираем класс анимации
-            elem.attr('class','').prependTo(photos);
-
-            // анимация закончилась
-            // позволяем нажатия на кнопки:
-            ignoreClicks = false;
-
-        },1000);
-    });
-
-    // нажатия на стрелку предыдущего фото
-    $('.arrow.previous').click(function(e){
-        e.preventDefault();
-        let elem = $('#photos li:first');
-
-        // передвигаем картинку вверх
-        // и назначаем анимацию
-        elem.appendTo(photos)
-            .addClass('animated')
-            .addClass( entrances[Math.floor(entrances.length*Math.random())] );
-
-        setTimeout(function(){
-            // убираем класс
-            elem.attr('class','');
-
-            ignoreClicks = false;
-        },1000);
-    });
-
-    // автоматическая смена картинок
-    let slideshow = setInterval(function(){
-        $('.arrow.next').trigger('click',[true]);
-    }, 1500);
-
+$(function(){
+    generateImage();
 });
