@@ -3,7 +3,7 @@ let tmpAnimation = 0;
 let clickCount = 1;
 const countImage = 6;
 const speed = 1500;
-const pathImages = "images/gallery/";
+const pathImages = "../images/gallery/";
 
 // функция для генерации изображения 
 function generateImage() {

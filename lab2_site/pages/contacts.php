@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -5,79 +8,44 @@
     <title>Контакты</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,
     shrink-to-fit=no">
-    <link rel="stylesheet" href="styles/mainStyle.css">
-    <link rel="stylesheet" href="styles/contactStyle.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/contact.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Pacific&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../scripts/main.js"></script>
 </head>
 <body>
 <header class="header">
     <div class="container">
-        <div class="nav">
-            <a href="index.php">
-                <img src="images/NX.png" alt="Logo" class="logo">
-            </a>
-            <ul class="menu">
-                <li>
-                    <a href="index.php">Главная</a>
-                </li>
-                <li>
-                    <a href="myworks.php">Мои работы</a>
-                </li>
-                <li>
-                    <a href="gallery.php">Галерея</a>
-                </li>
-                <li>
-                    <a href="about.php">Обо мне</a>
-                </li>
-                <li>
-                    <a href="contacts.php" style="border-bottom: 3px solid red;">Контакты</a>
-                </li>
-            </ul>
-            <ul class="sign-up">
-                <li>
-                    <a href="#">Регистрация</a>
-                </li>
-                <li><span>|</span></li>
-                <li>
-                    <a href="#">Войти</a>
-                </li>
-                <li>
-                    <button class="menu-open">
-                        <img src="images/menu.svg" alt="open-menu">
-                    </button>
-                </li>
-            </ul>
-        </div>
+        <?php include_once "../templates/header.php" ?>
         <div class="header-content-contacts">
             <h1 class="text-title-about">Контактная информация</h1>
             <div class="contact-block">
                 <div class="contact-dec">
-                    <img src="images/gicon.png" alt="gnail" class="logo-g">
+                    <img src="../images/icons/gicon.png" alt="gnail" class="logo-g">
                     <h2 class="title-gm">Gmail</h2>
                     <div class="button">
                         <a href="mailto:nurmuhammad77708@gmail.com" target="_blank">Перейти</a>
                     </div>
                 </div>
                 <div class="contact-dec">
-                    <img src="images/vk.png" alt="vk" class="logo-g">
+                    <img src="../images/icons/vk.png" alt="vk" class="logo-g">
                     <h2 class="title-vk">Vkantacte</h2>
                     <div class="button">
                         <a href="https://vk.com/n.khudoydotov" target="_blank">Перейти</a>
                     </div>
                 </div>
                 <div class="contact-dec">
-                    <img src="images/github.png" alt="github" class="logo-g">
+                    <img src="../images/icons/github.png" alt="github" class="logo-g">
                     <h2 class="title-gt">Github</h2>
                     <div class="button">
                         <a href="https://github.com/nurmuhammadx" target="_blank">Перейти</a>
                     </div>
                 </div>
                 <div class="contact-dec">
-                    <img src="images/tg.png" alt="telegram" class="logo-g">
+                    <img src="../images/icons/tg.png" alt="telegram" class="logo-g">
                     <h2 class="title-tg">Telegram</h2>
                     <div class="button">
                         <a href="https://t.me/nx2102" target="_blank">Перейти</a>
@@ -85,9 +53,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright">
-            Этот сайт разработан в рамках выполнения лабораторной работы в 2022 г.
-        </div>
+        <?php include_once "../templates/footer.php" ?>
     </div>
 </header>
 </body>

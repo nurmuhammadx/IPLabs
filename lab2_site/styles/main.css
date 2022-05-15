@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: url('../images/home_background.jpg') no-repeat center top / cover;
+    background: url('../images/main/home_background.jpg') no-repeat center top / cover;
     color: white;
     font-family: 'Oswald', sans-serif;
     font-size: 16px;
@@ -131,6 +131,16 @@ header a {
     top: 0;
     width: 20%;
     padding: 20px 20px 20px 70px;
+}
+
+.admin-a {
+    font-size: 18px;
+    font-family: 'Rubik Wet Paint', cursive;
+    color: darkred;
+}
+
+.admin-a:hover {
+    color: red;
 }
 /*--------------------------------------------------*/
 @media screen and (max-width: 1200px) {
