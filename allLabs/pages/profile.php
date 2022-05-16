@@ -28,15 +28,15 @@ if (isset($_SESSION['auth'])) {
                     <div class="form-content">
                         <form action="../server/update-profile.php?login=<?= $_SESSION['login'] ?>" class="sign-up-form" method="POST" enctype="multipart/form-data">
                             <div class="profile-left">
-                                <h3 class="pic-title">Profile picture</h3>
-                                <img class="right-img" src="<?php if (isset($_SESSION['avatar']) && !empty($_SESSION['avatar'])) {
+                                <h3 class="pic-title">Фото профиля</h3>
+                                <img class="left-img" src="<?php if (isset($_SESSION['avatar']) && !empty($_SESSION['avatar'])) {
                                     echo   $_SESSION['avatar'];
                                 } else {
                                     echo "../images/icons/profile.jpg";
                                 }          ?>" alt="ava">
                                 <input id="file-chooser" type="file" name="avatar" class="file-chooser">
                                 <label for="file-chooser" class="file-chooser-label">
-                                    <span class="file-wrapper"><img class="file-img" src="../images/icons/file-upload.svg" alt="Выбрать файл" width="25"></span>
+                                    <span class="file-wrapper"><img class="file-img" src="../images/icons/editava.png" alt="Выбрать файл" width="25"></span>
                                     <span class="file-text">Изменить</span>
                                 </label>
                             </div>

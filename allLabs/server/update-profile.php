@@ -2,12 +2,12 @@
 session_start();
 include_once "./db.class.php";
 DB::getInstance();
+$_SESSION["error-message"] = "";
 $username = htmlspecialchars($_POST['username']);
 $login = htmlspecialchars($_POST['login']);
 $currentLogin = $_GET['login'];
 $password = htmlspecialchars($_POST['password']);
 $password_conf = htmlspecialchars($_POST['password_conf']);
-$_SESSION["error-message"] = "";
 $query = "SELECT * FROM `users` WHERE `login` = '$currentLogin'";
 $avaCheckResult  = DB::query($query);
 $_SESSION['avatar'] = DB::fetch_array($avaCheckResult)['avatar_name'];
@@ -47,6 +47,7 @@ if (!$_SESSION["error-message"]) {
         move_uploaded_file($_FILES['avatar']['tmp_name'],  $uploadAvatar);
         $strQueryAvatar = ", `avatar_name` = '$truePathAvatar'";
     }
+
     $query =  "UPDATE `users` SET `username` = '$username', `login` = '$login'" . $strPass . $strQueryAvatar . "WHERE `login` = '$currentLogin'";
     $_SESSION['username'] = $username;
     $_SESSION['login'] = $login;

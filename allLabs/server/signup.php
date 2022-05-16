@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($password_conf)) {
         $_SESSION["error-message"] = "*Пажалуйста потдвердите пароль!";
     }
-    if (strlen($password) < 5) {
+    if (strlen($password) < 6) {
         $_SESSION["error-message"] = "*Пароль должен содержать не менее 6 символов";
     }
     if (empty($password)) {
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $checkLogin = "SELECT * FROM `users` WHERE `login` = '$login'";
         $res = DB::query($checkLogin);
 
-        if (!(($itemL = DB::fetch_array($res)) != false)) {
+        if (!(($item = DB::fetch_array($res)) != false)) {
             $query = "INSERT INTO `users` (`username`, `login`, `password`) VALUES ('$username', '$login', MD5('$password'))";
             DB::query($query);
             $checkType = "SELECT `user_type` FROM `users` WHERE `login` = '$login'";
