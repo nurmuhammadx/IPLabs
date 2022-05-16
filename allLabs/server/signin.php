@@ -22,19 +22,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION['user_type'] = DB::fetch_array($typeCheckResult)['user_type'];
             $_SESSION["auth"] = true;
             $_SESSION["username"] = $item['username'];
-//            $query = "SELECT * FROM `users` WHERE `login` = '$login'";
-//            $avaCheckResult  = DB::query($query);
-//            $_SESSION['avatar'] = DB::fetch_array($avaCheckResult)['avatar_name'];
+            $query = "SELECT * FROM `users` WHERE `login` = '$login'";
+            $avaCheckResult  = DB::query($query);
+            $_SESSION['avatar'] = DB::fetch_array($avaCheckResult)['avatar_name'];
         } else {
-            $_SESSION['error-message2'] = "Incorrect login or password";
+            $_SESSION['error-message2'] = "*Неправильный пароль или логин!";
         }
     } else {
-        $_SESSION['error-message2'] = "Incorrect login or password";
+        $_SESSION['error-message2'] = "*Неправильный логин или пароль!";
     }
 
 
     if (isset($_SESSION["auth"])) {
-        header("location: ../index.php");
+        header("location: ../pages/profile.php");
     } else {
         include_once "../pages/authorization.php";
     }

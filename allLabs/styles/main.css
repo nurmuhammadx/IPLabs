@@ -134,12 +134,17 @@ header a {
 }
 
 .admin-a {
-    font-size: 18px;
+    font-size: 16px;
+    font-family: 'Rubik Wet Paint', cursive;
+}
+
+.list-a {
+    font-size: 16px;
     font-family: 'Rubik Wet Paint', cursive;
     color: darkred;
 }
 
-.admin-a:hover {
+.list-a:hover {
     color: red;
 }
 /*--------------------------------------------------*/

@@ -12,7 +12,7 @@ if (isset($_SESSION['auth']) && isset($_SESSION['user_type']) && $_SESSION['user
         <title>Панель Администратора</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="../styles/main.css">
-        <link rel="stylesheet" href="../styles/admin.css">
+        <link rel="stylesheet" href="../styles/listuser.css">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Pacific&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@ if (isset($_SESSION['auth']) && isset($_SESSION['user_type']) && $_SESSION['user
                                 if (!empty($item['avatar_name'])) {
                                     echo $item['avatar_name'];
                                 } else {
-                                    echo "../images/profile.jpg";
+                                    echo "../images/icons/profile.jpg";
                                 }
                                 ?>" alt="avatar"></div>
                             <div class="table-str"><?= $item['avatar_name'] ?></div>

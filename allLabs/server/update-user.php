@@ -14,4 +14,4 @@ if (!empty($password)) {
 
 $query =  "UPDATE `users` SET `username` = '$username', `login` = '$login', `user_type` = '$type'" . $pass . "WHERE id='$id'";
 DB::query($query);
-header("location: ../pages/admin.php");
+header("location: ../pages/listuser.php");

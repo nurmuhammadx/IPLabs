@@ -12,7 +12,7 @@ if (isset($_SESSION['auth']) && isset($_SESSION['user_type']) && $_SESSION['user
         <title>Редактировать</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="../styles/main.css">
-        <link rel="stylesheet" href="../styles/sign.css">
+        <link rel="stylesheet" href="../styles/edituser.css">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Pacific&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -38,6 +38,7 @@ if (isset($_SESSION['auth']) && isset($_SESSION['user_type']) && $_SESSION['user
                                 <input type="text" placeholder="Type" name="type" class="field" value="<?= $item['user_type'] ?>">
                                 <input type="password" placeholder="Введите пароль" name="password" class="field">
                                 <input type="submit" value="Изменить" name="submit" class="subSave">
+                            </form>
                         </div>
                     </div>
                 <?php }

@@ -17,8 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($password_conf)) {
         $_SESSION["error-message"] = "*Пажалуйста потдвердите пароль!";
     }
-    if (strlen($password) < 6) {
-        $_SESSION["error-message"] = "*Пароль должен содержать не менее 8 символов";
+    if (strlen($password) < 5) {
+        $_SESSION["error-message"] = "*Пароль должен содержать не менее 6 символов";
     }
     if (empty($password)) {
         $_SESSION["error-message"] = "*Поле пароль не может быть пустым!";
@@ -31,29 +31,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     if (!$_SESSION["error-message"]) {
-        $checkUsername = "SELECT * FROM `users` WHERE `username` = '$username'";
-        $resultU = DB::query($checkUsername);
         $checkLogin = "SELECT * FROM `users` WHERE `login` = '$login'";
-        $resultL = DB::query($checkLogin);
+        $res = DB::query($checkLogin);
 
-        if (!(($itemU = DB::fetch_array($resultU)) != false)) {
+        if (!(($itemL = DB::fetch_array($res)) != false)) {
             $query = "INSERT INTO `users` (`username`, `login`, `password`) VALUES ('$username', '$login', MD5('$password'))";
             DB::query($query);
-//            $checkType = "SELECT `type` FROM `users` WHERE `login` = '$login'";
-//            $typeCheckResult  = DB::query(($checkType));
-//            $_SESSION['type'] = DB::fetch_array($typeCheckResult)['type'];
-            $_SESSION["auth"] = true;
-            $_SESSION["username"] = $username;
-        } else {
-            $_SESSION["error-message"] = "Это имя уже занято, попробуйте другой!";
-        }
-
-        if (!(($itemL = DB::fetch_array($resultL)) != false)) {
-            $query = "INSERT INTO `users` (`username`, `login`, `password`) VALUES ('$username', '$login', MD5('$password'))";
-            DB::query($query);
-//            $checkType = "SELECT `type` FROM `users` WHERE `login` = '$login'";
-//            $typeCheckResult  = DB::query(($checkType));
-//            $_SESSION['type'] = DB::fetch_array($typeCheckResult)['type'];
+            $checkType = "SELECT `user_type` FROM `users` WHERE `login` = '$login'";
+            $typeCheckResult  = DB::query(($checkType));
+            $_SESSION['user_type'] = DB::fetch_array($typeCheckResult)['user_type'];
             $_SESSION["auth"] = true;
             $_SESSION["username"] = $username;
         } else {
@@ -64,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
 if (isset($_SESSION["auth"])) {
-    header("location: ../index.php");
+    header("location: ../pages/profile.php");
 } else {
     include_once "../pages/registration.php";
 }

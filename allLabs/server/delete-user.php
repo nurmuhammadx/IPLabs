@@ -5,5 +5,5 @@ if ($_SESSION['type'] == 0) {
     DB::getInstance();
     $query = "DELETE  FROM `users` WHERE `id`=" . $_GET['id'];
     DB::query($query);
-    header("location: ../pages/admin.php");
+    header("location: ../pages/listuser.php");
 }

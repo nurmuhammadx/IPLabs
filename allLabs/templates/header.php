@@ -4,7 +4,7 @@
     </a>
     <ul class="menu">
         <li>
-            <a href="../index.php">Главная</a>
+            <a href="/allLabs/index.php">Главная</a>
         </li>
         <li>
             <a href="/allLabs/pages/works.php">Мои работы</a>
@@ -36,11 +36,12 @@
             } ?>
         </li>
         <?php if (isset($_SESSION["auth"])) {
-            if(isset($_SESSION["username"]) && $_SESSION["username"] != 0) {
-                echo "<li><a href='/allLabs/pages/profile.php'>" . $_SESSION["username"] . "</a></li>";
+            if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 1) {
+                echo "<li><a href='/allLabs/pages/profile.php'><h3 class='admin-a'>" . $_SESSION["username"] . "</h3></a></li>";
             }
             if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 0) {
-                echo "<li><a href='/allLabs/pages/admin.php'><h3 class='admin-a'>Administrator</h3></a></li>";
+                echo "<li><a href='/allLabs/pages/profile.php'><h3 class='admin-a'>" . $_SESSION["username"] . "</h3></a></li>";
+                echo "<li><a href='/allLabs/pages/listuser.php'><h3 class='list-a'>List user</h3></a></li>";
             }
             echo "<li><a href='/allLabs/server/signout.php'>Выход</a></li>";
             }

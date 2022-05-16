@@ -1,0 +1,154 @@
+.form-title {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.pic-title {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.form-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.sign-up-form {
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    border: 3px solid darkred;
+    width: 100%;
+}
+
+.profile-left {
+    margin: 50px;
+}
+
+.profile-right {
+    margin: 50px;
+}
+
+.signup {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+
+.field {
+    display: block;
+    width: 250px;
+    height: 25px;
+    border: 3px solid darkred;
+    border-radius: 5em;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.subSave {
+    display: block;
+    height: 40px;
+    width: 50%;
+    border: 3px solid darkred;
+    padding: 3px;
+    border-radius: 5em;
+    color: black;
+    background-color: red;
+    cursor: pointer;
+    transition: all .3s ease;
+    font-size: 20px;
+    font-family: 'Rubik Wet Paint', cursive;
+    margin-left: 70px;
+    margin-bottom: 50px;
+}
+
+.subSave:hover {
+    transform: scale(1.1);
+    transition: all .3s ease;
+}
+
+.field::-webkit-input-placeholder {
+    color: darkred;
+    font-size: 16px;
+    transition: all .1s ease;
+}
+.field:focus {
+    border: 3px solid darkred;
+    transition: all .1s ease;
+}
+
+.right-img {
+    border: 5px solid darkred;
+    border-radius: 20em;
+}
+
+.label {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.file-chooser {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+.file-chooser-label {
+    width: 100px;
+    padding-right: 15px;
+    max-width: 290px;
+    height: 30px;
+    background: darkred;;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 auto;
+    position: relative;
+    bottom: 30px;
+    right: 50px;
+}
+
+.file-chooser-label:hover {
+    background: red;
+}
+
+.file-wrapper {
+    height: 60px;
+    width: 60px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-img {
+    width: 225px;
+    height: 225px;
+}
+
+.file-img {
+    width: 25px;
+    user-select: none;
+}
+
+.file-text {
+    line-height: 1;
+    margin-top: 1px;
+    user-select: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+}
