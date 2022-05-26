@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('../images/main/home_background.jpg') no-repeat center top / cover;
+    text-transform: uppercase;
+
+}
+
+h1 {
+    color: white;
+    font-family: 'Rubik Wet Paint', cursive;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+
+}
+.game-container {
+    width: 800px;
+    height: 500px;
+    margin-left: 160px;
+}
+
+#game-background {
+    width: 100%;
+    height: 100%;
+    border: 5px solid darkred;
+    background-repeat: no-repeat;
+}
+
+.user-interface {
+    width: 800px;
+    margin-top: 5px;
+    border: 5px solid darkred;
+    background: rgba(0,0,0,0.5);
+}
+
+.user-title {
+    margin-left: 240px;
+}
+
+.user {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.ball-block {
+    margin: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+}
+
+.field {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid darkred;
+    background-color: #fff;
+    margin-top: 10px;
+}
+
+.field:focus {
+    outline: 2px solid darkred;
+}
+
+.submit {
+    display: block;
+    height: 40px;
+    width: 20%;
+    border: 3px solid darkred;
+    padding: 3px;
+    border-radius: 5em;
+    color: black;
+    background-color: red;
+    cursor: pointer;
+    transition: all .3s ease;
+    font-size: 16px;
+    font-family: 'Rubik Wet Paint', cursive;
+    margin-left: 300px;
+    margin-bottom: 20px;
+}
+
+.submit:hover {
+    transform: scale(1.1);
+    transition: all .3s ease;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: dodgerblue;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.orange {
+    color: orange;
+}
+
+
+
+
+
+
+
+
+.copyright {
+    color: white;
+    margin-top: 250px;
+}

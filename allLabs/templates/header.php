@@ -16,6 +16,9 @@
             <a href="/allLabs/pages/about.php">Обо мне</a>
         </li>
         <li>
+            <a href="/allLabs/pages/game.php">Игра</a>
+        </li>
+        <li>
             <a href="/allLabs/pages/contacts.php">Контакты</a>
         </li>
     </ul>
